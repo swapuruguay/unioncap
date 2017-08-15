@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ .ir-arriba {
+	display:none;
+	padding:5px;
+	background:#CCC;
+	font-size:30px;
+	color:#F60;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:5%;
+}

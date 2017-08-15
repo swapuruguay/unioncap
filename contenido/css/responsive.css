@@ -1,0 +1,4 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 600px) {.logo-menu{ display:none}.texto-ficha, .texto-ficha p, .img-ficha, .ficha { width:100%} .img-ficha{ margin-top:5%; margin-bottom:10%}.intro h1{ font-size:36px}.intro h2{ font-size:24px}.texto-presentacion p{ font-size:14px; width:100%}.imagen-grupo img{width:100%; box-shadow:none}.texto-ficha h1{ margin-top:2%}.boton-descarga a{margin:15% 0%; width:100%; font-size:12px}.submenu2{ display:none}.texto-video,.texto-video p, .img-video{ margin-top:15%;width:100%;}.img-video{ margin-bottom:10%}.box a{ margin-top:1.2%}.imagen-informacion{ width:90%; padding:5% 5%; height:auto} .texto-informacion{ width:90%;padding:5% 5%;height:auto}.texto-informacion h1{margin-bottom:5%}.fotos img{width:100%; margin-bottom:5%}}
