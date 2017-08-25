@@ -12,8 +12,8 @@
     <div class=" collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right ">
         <li><a class="active hvr-overline-from-left" href="index.php" >Inicio</a></li>
-        <li><a class="hvr-overline-from-left" href="novedades.php">Novedades</a></li>
-        <li><a class="hvr-overline-from-left" href="galeria.php">Galeria</a></li>
+        <li><a class="hvr-overline-from-left" href="index.php?mod=n">Novedades</a></li>
+        <li><a class="hvr-overline-from-left" href="index.php?mod=g">Galeria</a></li>
       </ul>
     </div>
   </div>

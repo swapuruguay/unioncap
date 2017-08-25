@@ -1,4 +1,11 @@
-﻿ <!DOCTYPE html>
+<?php
+  session_start();
+  if(!isset($_SESSION['usuario'])) {
+  header('Location:login.php');
+}
+?>
+
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -26,7 +33,7 @@
 
 
 
-
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rouge+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:700i" rel="stylesheet">
@@ -46,6 +53,8 @@
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel='stylesheet' href="js/jquery.cleditor.css">
+        <script src='js/jquery.cleditor.min.js'></script>
 
 
 
@@ -71,7 +80,10 @@
 
   .logo{font-weight:bold}
   .slide{margin-top:-1.3%}
+  .cuerpo {
+    min-height: 70vh;
 
+  }
   </style>
 
 
@@ -83,32 +95,44 @@
 <!-- Inicio menu -->
   <?php include 'menu.php'; ?>
 <!-- fin menu -->
+<div class="container cuerpo">
 
 
+  <?php
+
+  if(isset($_GET['mod'])) {
+    $mod = $_GET['mod'];
+
+    switch($mod) {
+      case 'n':
+        include 'novedades.php';
+        break;
+      case 'g':
+        include 'galeria.php';
+        break;
+      case 'nn':
+        include 'nueva-novedad.php';
+        break;
+      case 'ng':
+        include 'nueva-foto.php';    
+    }
+  }
 
 
-  <section class="container padding5">
-    <div class="row">
-      <div class="col-md-3 col-xs-12 col-lg-3">
-			   <h3>Informática y Sistemas</h3>
-         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet. <br>
-         <br>
-         <a class=" btn btn-warning "  href="#">Informática y Sistemas <span class="glyphicon glyphicon-menu-right"></span> </a>
-      </div>
-    </div>
-  </section>
+  ?>
+</div>
   <footer>
-    <div class="container-fluid bg-gris paddingtop" id="contact">
+    <div class="container" id="contact">
       <div class="row">
         <div class="container">
           <div class="col-lg-4 col-xs-12">
             <img src="img/LOGO.png" width="60%" class="img-responsive">
           </div>
-          <div class="col-lg-4 col-xs-12">
-          </div>
+
         </div>
       </div>
     </div>
   </footer>
+
 </body>
 </html>

@@ -149,7 +149,7 @@
 
     <div class="imagenes-sucursales paddingtop margin">
 <?php while($row = $result->fetch_object()): ?>
-<a href="img/<?php echo $row->ruta ?>" rel="prettyPhoto[pp_gal]"><img src="img/<?php echo $row->ruta ?>" width="200" height="auto" alt="" /></a>
+<a href="upload/galeria/<?php echo $row->ruta ?>" rel="prettyPhoto[pp_gal]"><img src="upload/galeria/<?php echo $row->ruta ?>" width="200" height="auto" alt="" /></a>
 <?php endwhile ?>
   </div>
 

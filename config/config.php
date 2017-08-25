@@ -1,8 +1,8 @@
 <?php
 
 define('HOST', 'localhost');
-define('USER', 'root');
-define('PASS', 'ws7');
-define('DBNAME', 'union');
+define('USER', 'transpor_union');
+define('PASS', 'marian77$');
+define('DBNAME', 'transpor_union');
 
 ?>

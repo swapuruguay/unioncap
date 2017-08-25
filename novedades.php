@@ -3,7 +3,7 @@
 require_once 'config/config.php';
 
 $mysqli = new mysqli(HOST, USER, PASS, DBNAME);
-$sql = "SELECT * FROM novedades WHERE estado = 1";
+$sql = "SELECT * FROM novedades WHERE estado = 1 ORDER BY id_novedad DESC";
 $result = $mysqli->query($sql);
 
 
@@ -145,7 +145,7 @@ $result = $mysqli->query($sql);
       <?php while($row = $result->fetch_object()): ?>
       <div class=" paddingtop col-lg-12">
   			<div class="col-lg-4 col-xs-12">
-       		<a href="img/<?php echo $row->ruta ?>" rel="prettyPhoto[pp_gal]"><img src="img/<?php echo $row->ruta ?>" class="rota" width="100%" height="auto" alt="" /></a>
+       		<a href="upload/noticias/<?php echo $row->ruta ?>" rel="prettyPhoto[pp_gal]"><img src="upload/noticias/<?php echo $row->ruta ?>" class="rota" width="100%" height="auto" alt="" /></a>
        	</div>
        	<div class="col-lg-8 col-xs-12">
 				  <h2><?php echo $row->titulo ?></h2>
